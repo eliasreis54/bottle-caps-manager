@@ -9,9 +9,11 @@ class MockTeamRepository extends Mock implements TeamRepository {}
 void main() {
   group('App', () {
     testWidgets('renders CounterPage', (tester) async {
-      await tester.pumpWidget(App(
-        teamRepository: MockTeamRepository(),
-      ));
+      await tester.pumpWidget(
+        App(
+          teamRepository: MockTeamRepository(),
+        ),
+      );
       expect(find.byType(CounterPage), findsOneWidget);
     });
   });
