@@ -1,6 +1,12 @@
 import 'package:bottle_caps_manager/app/app.dart';
 import 'package:bottle_caps_manager/bootstrap.dart';
+import 'package:team_repository/team_repository.dart';
 
 void main() {
-  bootstrap(() => const App());
+  const teamRepository = TeamRepository();
+  bootstrap(
+    () => const App(
+      teamRepository: teamRepository,
+    ),
+  );
 }
