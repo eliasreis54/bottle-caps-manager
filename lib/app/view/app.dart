@@ -6,15 +6,20 @@ import 'package:nes_ui/nes_ui.dart';
 import 'package:team_repository/team_repository.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  const App({
+    super.key,
+    required TeamRepository teamRepository,
+  }) : _teamRepository = teamRepository;
+
+  final TeamRepository _teamRepository;
 
   @override
   Widget build(BuildContext context) {
     return MultiRepositoryProvider(
       providers: [
-        RepositoryProvider(
-          create: (context) => const TeamRepository(),
-        )
+        RepositoryProvider.value(
+          value: _teamRepository,
+        ),
       ],
       child: MaterialApp(
         theme: flutterNesTheme(),
