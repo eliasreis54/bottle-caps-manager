@@ -1,7 +1,44 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
+    "generateTeam": "Generate team",
+    "@generateTeam": {
+        "description": "Text shown in the AppBar of the generate team page"
+    },
+    "invalidNumberOfParticipants": "Invalid number of participants",
+    "@invalidNumberOfParticipants": {
+        "description": "Text shown in the SnackBar of the generate team page"
+    },
+    "addPlayers": "Insert players",
+    "@addPlayers": {
+        "description": "Text shown in the the generate team page"
+    },
+    "playersInTheList": "{players, plural, =1{1 Player} other{{players} Players}}",
+    "@playersInTheList": {
+        "description": "Text shown in the SnackBar of the generate team page",
+        "type": "text",
+        "placeholders": {
+          "players": {
+            "type": "int"
+          }
+        }
+    },
+    "callYourTeammates": "Call your teammates",
+    "@callYourTeammates": {
+        "description": "Text shown in the the generate team page"
+    },
+    "playerNameCannotBeEmpty": "Player name can not be empty",
+    "@playerNameCannotBeEmpty": {
+        "description": "Text shown in the the generate team page SnackBar"
+    },
+    "delete": "Delete",
+    "@delete": {
+        "description": "Delete text"
+    },
+    "generate": "Generate",
+    "@generate": {
+        "description": "Generate text"
     }
 }
+
+
+
