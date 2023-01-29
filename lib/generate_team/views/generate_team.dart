@@ -76,7 +76,7 @@ class GenerateTeamView extends StatelessWidget {
                   children: [
                     Text(
                       'Team A',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     const SizedBox(height: 8),
                     OpponentsList(
@@ -86,7 +86,7 @@ class GenerateTeamView extends StatelessWidget {
                     const SizedBox(height: 12),
                     Text(
                       'Team A',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     const SizedBox(height: 8),
                     OpponentsList(
@@ -94,12 +94,13 @@ class GenerateTeamView extends StatelessWidget {
                       backgroundColor: Colors.blueGrey[300],
                     ),
                     ElevatedButton(
-                        child: Text('Redo'),
-                        onPressed: () {
-                          context
-                              .read<GenerateTeamBloc>()
-                              .add(const GenerateTeamRedoRequested());
-                        }),
+                      child: const Text('Redo'),
+                      onPressed: () {
+                        context
+                            .read<GenerateTeamBloc>()
+                            .add(const GenerateTeamRedoRequested());
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -116,14 +117,14 @@ class GenerateTeamView extends StatelessWidget {
                   children: [
                     Text(
                       l10n.addPlayers,
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     const SizedBox(height: 8),
                     Visibility(
                       visible: stateSuccess.players.isNotEmpty,
                       child: Text(
                         l10n.playersInTheList(stateSuccess.players.length),
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ),
                     const SizedBox(height: 8),
