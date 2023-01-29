@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:team_repository/src/exceptions/exceptions.dart';
 import 'package:team_repository/team_repository.dart';
 import 'package:test/test.dart';
 
