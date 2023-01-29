@@ -2,4 +2,5 @@
 library team_repository;
 
 export 'src/exceptions/exceptions.dart';
+export 'src/models/models.dart';
 export 'src/team_repository.dart';
