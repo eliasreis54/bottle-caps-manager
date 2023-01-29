@@ -35,4 +35,35 @@ class TeamRepository {
       ),
     );
   }
+
+  /// Given a list of the winners and a list of next players
+  /// merge winners with the new players.
+  Opponents mergeTeams({
+    required Team winners,
+    required Team nextPlayers,
+  }) {
+    winners.teamPlayers.shuffle();
+    nextPlayers.teamPlayers.shuffle();
+
+    final newTeamA = [
+      ...winners.teamPlayers.getRange(0, 3),
+      ...nextPlayers.teamPlayers.getRange(0, 3)
+    ].toList();
+
+    final newTeamB = [
+      ...winners.teamPlayers.getRange(3, 6),
+      ...nextPlayers.teamPlayers.getRange(3, 6)
+    ].toList();
+
+    return Opponents(
+      teamA: Team(
+        name: 'Team A',
+        teamPlayers: newTeamA,
+      ),
+      teamB: Team(
+        name: '',
+        teamPlayers: newTeamB,
+      ),
+    );
+  }
 }

@@ -54,5 +54,49 @@ void main() {
         },
       );
     });
+
+    group('mergeTeams', () {
+      test('merge winners and next players', () {
+        final winners = Team(
+          name: 'winners',
+          teamPlayers: ['1', '2', '3', '4', '5', '6'],
+        );
+
+        final nextPlayers = Team(
+          name: 'winners',
+          teamPlayers: ['7', '8', '9', '10', '11', '12'],
+        );
+
+        final opponents = teamRepository.mergeTeams(
+          winners: winners,
+          nextPlayers: nextPlayers,
+        );
+
+        var numberOfWinnersInTheATeam = 0;
+        var numberOfWinnersInTheBTeam = 0;
+
+        for (final element in opponents.teamA.teamPlayers) {
+          if (winners.teamPlayers.contains(element)) {
+            numberOfWinnersInTheATeam++;
+          }
+        }
+
+        for (final element in opponents.teamB.teamPlayers) {
+          if (winners.teamPlayers.contains(element)) {
+            numberOfWinnersInTheBTeam++;
+          }
+        }
+
+        expect(numberOfWinnersInTheATeam, equals(3));
+        expect(numberOfWinnersInTheBTeam, equals(3));
+
+        expect(
+          opponents.teamA.teamPlayers,
+          isNot(
+            equals(opponents.teamB.teamPlayers),
+          ),
+        );
+      });
+    });
   });
 }
