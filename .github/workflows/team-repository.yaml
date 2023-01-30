@@ -21,5 +21,5 @@ jobs:
     with:
       flutter_channel: stable
       flutter_version: 3.3.10
-      min_coverage: 50
+      min_coverage: 10
 

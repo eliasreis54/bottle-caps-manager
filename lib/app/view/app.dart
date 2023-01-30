@@ -1,4 +1,4 @@
-import 'package:bottle_caps_manager/generate_team/generate_team.dart';
+import 'package:bottle_caps_manager/home/home.dart';
 import 'package:bottle_caps_manager/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,7 +25,7 @@ class App extends StatelessWidget {
         theme: flutterNesTheme(),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: const GenerateTeamPage(),
+        home: const HomePage(),
       ),
     );
   }

@@ -37,6 +37,14 @@
     "generate": "Generate",
     "@generate": {
         "description": "Generate text"
+    },
+    "addWinners": "Add winners",
+    "@addWinners": {
+        "description": "Text shwon in the merge team page"
+    },
+    "addNextPlayers": "Add next players",
+    "@addNextPlayers": {
+        "description": "Text shwon in the merge team page"
     }
 }
 
