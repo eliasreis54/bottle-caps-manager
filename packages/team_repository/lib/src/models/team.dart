@@ -3,7 +3,7 @@
 /// {@endtemplate}
 class Team {
   /// {@team_class}
-  Team({
+  const Team({
     required this.name,
     required this.teamPlayers,
   });
