@@ -16,7 +16,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
-  nes_ui: ^0.1.0
+  nes_ui: ^0.2.0
   team_repository:
     path: ./packages/team_repository
 

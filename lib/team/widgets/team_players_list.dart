@@ -1,5 +1,6 @@
 import 'package:bottle_caps_manager/l10n/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:nes_ui/nes_ui.dart';
 
 class TeamPlayersList extends StatelessWidget {
   const TeamPlayersList({
@@ -35,7 +36,7 @@ class TeamPlayersList extends StatelessWidget {
                     players[index],
                   ),
                   trailing: IconButton(
-                    icon: const Icon(Icons.delete),
+                    icon: NesIcon(iconData: NesIcons.instance.delete),
                     onPressed: () {
                       onDeleteTap(index);
 

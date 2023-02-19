@@ -1,18 +1,18 @@
 {
-    "@@locale": "en",
-    "generateTeam": "Generate team",
+    "@@locale": "pt",
+    "generateTeam": "Gerar times",
     "@generateTeam": {
         "description": "Text shown in the AppBar of the generate team page"
     },
-    "invalidNumberOfParticipants": "Invalid number of participants",
+    "invalidNumberOfParticipants": "Número de participantes inválido",
     "@invalidNumberOfParticipants": {
         "description": "Text shown in the SnackBar of the generate team page"
     },
-    "addPlayers": "Insert players",
+    "addPlayers": "Inserir jogadores",
     "@addPlayers": {
         "description": "Text shown in the the generate team page"
     },
-    "playersInTheList": "{players, plural, =1{1 Player} other{{players} Players}}",
+    "playersInTheList": "{players, plural, =1{1 Jogador} other{{players} Jogadores}}",
     "@playersInTheList": {
         "description": "Text shown in the SnackBar of the generate team page",
         "type": "text",
@@ -22,51 +22,51 @@
           }
         }
     },
-    "callYourTeammates": "Call your teammates",
+    "callYourTeammates": "Chame seus amigos",
     "@callYourTeammates": {
         "description": "Text shown in the the generate team page"
     },
-    "playerNameCannotBeEmpty": "Player name can not be empty",
+    "playerNameCannotBeEmpty": "Nome do jogador não pode ser vazio",
     "@playerNameCannotBeEmpty": {
         "description": "Text shown in the the generate team page SnackBar"
     },
-    "delete": "Delete",
+    "delete": "Apagar",
     "@delete": {
         "description": "Delete text"
     },
-    "generate": "Generate",
+    "generate": "Gerar",
     "@generate": {
         "description": "Generate text"
     },
-    "addWinners": "Add winners",
+    "addWinners": "Time vencedor",
     "@addWinners": {
         "description": "Text shwon in the merge team page"
     },
-    "addNextPlayers": "Add next players",
+    "addNextPlayers": "Time de próximo",
     "@addNextPlayers": {
         "description": "Text shwon in the merge team page"
     },
-    "mergeTeam": "Merge Team",
+    "mergeTeam": "Mesclar times",
     "@mergeTeam": {
         "description": "Text shown in the merge team page"
     },
-    "redo": "Redo",
+    "redo": "Refazer",
     "@redo": {
         "description": "Redo text"
     },
-    "next": "Next",
+    "next": "Próximo",
     "@next": {
         "description": "Next text"
     },
-    "merge": "Merge",
+    "merge": "Mesclar",
     "@merge": {
         "description": "Merge text"
     },
-    "back": "Back",
+    "back": "Voltar",
     "@back": {
         "description": "Back text"
     },
-    "mergeTeamInvalidNumberOfPlayers": "Invalid number of players. Must be 6 each side",
+    "mergeTeamInvalidNumberOfPlayers": "Número de participantes inválido. Precisa de 6 para cada lado",
     "@mergeTeamInvalidNumberOfPlayers": {
         "description": "Merge team page SnackBar message"
     }

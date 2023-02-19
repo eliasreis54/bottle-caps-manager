@@ -1,4 +1,5 @@
 import 'package:bottle_caps_manager/home/cubit/home_cubit.dart';
+import 'package:bottle_caps_manager/l10n/l10n.dart';
 import 'package:bottle_caps_manager/team/generate_team/generate_team.dart';
 import 'package:bottle_caps_manager/team/merge_team/merge_team.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       body: BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
         if (state.index == 0) {
@@ -38,11 +41,11 @@ class HomeView extends StatelessWidget {
             currentIndex: state.index,
             items: [
               BottomNavigationBarItem(
-                label: 'add',
+                label: l10n.generateTeam,
                 icon: NesIcon(iconData: NesIcons.instance.check),
               ),
               BottomNavigationBarItem(
-                label: 'merge',
+                label: l10n.mergeTeam,
                 icon: NesIcon(iconData: NesIcons.instance.axe),
               ),
             ],

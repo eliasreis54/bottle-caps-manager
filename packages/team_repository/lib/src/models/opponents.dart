@@ -8,6 +8,10 @@ class Opponents {
   Opponents({
     required this.teamA,
     required this.teamB,
+    this.nextPlayers = const Team(
+      name: '',
+      teamPlayers: [],
+    ),
   });
 
   /// The fisrt opponent.
@@ -15,4 +19,7 @@ class Opponents {
 
   /// The seccond opponent.
   final Team teamB;
+
+  /// The next players.
+  final Team nextPlayers;
 }

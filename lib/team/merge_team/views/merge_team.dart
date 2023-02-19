@@ -55,7 +55,7 @@ class MergeTeamView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('merge team'),
+        title: Text(l10n.mergeTeam),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8),
@@ -63,9 +63,9 @@ class MergeTeamView extends StatelessWidget {
           listener: (context, state) {
             if (state.status == MergeTeamStatus.error) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
+                SnackBar(
                   content: Text(
-                    'Invalid number of players. Must be 6 each side',
+                    l10n.mergeTeamInvalidNumberOfPlayers,
                   ),
                 ),
               );
@@ -75,19 +75,9 @@ class MergeTeamView extends StatelessWidget {
             if (state.step == MergeTeamSteps.opponentsReady) {
               return Column(
                 children: [
-                  Text(
-                    'Team A',
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                  OpponentsList(players: state.opponents!.teamA.teamPlayers),
-                  const SizedBox(height: 12),
-                  Text(
-                    'Team B',
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                  OpponentsList(players: state.opponents!.teamB.teamPlayers),
+                  OpponentsList(opponents: state.opponents!),
                   ElevatedButton(
-                    child: const Text('Redo'),
+                    child: Text(l10n.redo),
                     onPressed: () {
                       context
                           .read<MergeTeamBloc>()
@@ -106,7 +96,7 @@ class MergeTeamView extends StatelessWidget {
                         ),
                       );
                 },
-                buttonActionText: 'next',
+                buttonActionText: l10n.next,
                 onSubmitted: (playerName) {
                   _addPlayer(
                     step: state.step,
@@ -130,7 +120,7 @@ class MergeTeamView extends StatelessWidget {
                       .read<MergeTeamBloc>()
                       .add(const MergeTeamMergeRequested());
                 },
-                buttonActionText: 'merge',
+                buttonActionText: l10n.merge,
                 onSubmitted: (playerName) {
                   _addPlayer(
                     step: state.step,
@@ -185,6 +175,7 @@ class _MergeTeamInsertPlayers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Column(
       children: [
         Text(
@@ -208,8 +199,8 @@ class _MergeTeamInsertPlayers extends StatelessWidget {
                 visible: backButtonAction != null,
                 child: ElevatedButton(
                   onPressed: backButtonAction,
-                  child: const Text(
-                    'Back',
+                  child: Text(
+                    l10n.back,
                   ),
                 ),
               ),

@@ -77,8 +77,7 @@ class GenerateTeamBloc extends Bloc<GenerateTeamEvent, GenerateTeamState> {
 
       emit(
         GenerateTeamStateOpponents(
-          teamA: opponents.teamA.teamPlayers,
-          teamB: opponents.teamB.teamPlayers,
+          opponents: opponents,
         ),
       );
     } on InsuficientParticipantsException {

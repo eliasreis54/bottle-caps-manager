@@ -16,13 +16,9 @@ class TeamRepository {
 
     participants.shuffle();
 
-    final participantsNumber = (participants.length / 2).floor();
-
-    final teamA = participants.getRange(
-      participantsNumber,
-      participants.length,
-    );
-    final teamB = participants.getRange(0, participantsNumber);
+    final teamA = participants.getRange(6, 12);
+    final teamB = participants.getRange(0, 6);
+    final nextPlayers = participants.getRange(12, participants.length);
 
     return Opponents(
       teamA: Team(
@@ -30,8 +26,12 @@ class TeamRepository {
         teamPlayers: teamA.toList(),
       ),
       teamB: Team(
-        name: 'Team b',
+        name: 'Team B',
         teamPlayers: teamB.toList(),
+      ),
+      nextPlayers: Team(
+        name: 'Next Players',
+        teamPlayers: nextPlayers.toList(),
       ),
     );
   }
@@ -61,7 +61,7 @@ class TeamRepository {
         teamPlayers: newTeamA,
       ),
       teamB: Team(
-        name: '',
+        name: 'Team B',
         teamPlayers: newTeamB,
       ),
     );

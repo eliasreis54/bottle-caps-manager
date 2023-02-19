@@ -29,15 +29,13 @@ class GenerateTeamStateEmptyName extends GenerateTeamState {
 
 class GenerateTeamStateOpponents extends GenerateTeamState {
   const GenerateTeamStateOpponents({
-    required this.teamA,
-    required this.teamB,
+    required this.opponents,
   });
 
-  final List<String> teamA;
-  final List<String> teamB;
+  final Opponents opponents;
+
   @override
   List<Object?> get props => [
-        teamA,
-        teamB,
+        opponents,
       ];
 }

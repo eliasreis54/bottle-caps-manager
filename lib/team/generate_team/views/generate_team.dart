@@ -68,31 +68,13 @@ class GenerateTeamView extends StatelessWidget {
               child: SafeArea(
                 child: Column(
                   children: [
-                    Text(
-                      'Team A',
-                      style: Theme.of(context).textTheme.headlineSmall,
-                    ),
-                    const SizedBox(height: 8),
-                    OpponentsList(
-                      players: state.teamA,
-                      backgroundColor: Colors.blueGrey[500],
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      'Team B',
-                      style: Theme.of(context).textTheme.headlineSmall,
-                    ),
-                    const SizedBox(height: 8),
-                    OpponentsList(
-                      players: state.teamB,
-                      backgroundColor: Colors.blueGrey[300],
-                    ),
+                    OpponentsList(opponents: state.opponents),
                     ElevatedButton(
-                      child: const Text('Redo'),
+                      child: Text(l10n.redo),
                       onPressed: () {
-                        context
-                            .read<GenerateTeamBloc>()
-                            .add(const GenerateTeamRedoRequested());
+                        context.read<GenerateTeamBloc>().add(
+                              const GenerateTeamRedoRequested(),
+                            );
                       },
                     ),
                   ],
